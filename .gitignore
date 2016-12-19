@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NewSky.WebApi/bin/Debug
+/NewSky.WebApi/obj/Debug
+/NewSkyWeb/obj/Debug
+/WebApiHost/bin/Debug
+/WebApiHost/obj/Debug
+/NewSky.WebApi/bin/Release
+/NewSky.WebApi/obj/Release
+/NewSkyWeb/obj/Release
+/WebApiHost/bin/Release
+/WebApiHost/obj/Release
