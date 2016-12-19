@@ -1,1 +1,0 @@
-D:\dev-my\NewSky\WebApiHost\bin\Debug\WebApiHost.exe.config
