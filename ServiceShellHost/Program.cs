@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiHost
+namespace ServiceShellHost
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace WebApiHost
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new ServiceShellHost()
             };
             ServiceBase.Run(ServicesToRun);
         }

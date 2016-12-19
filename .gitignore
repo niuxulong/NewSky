@@ -12,3 +12,6 @@
 /NewSkyWeb/obj/Release
 /WebApiHost/bin/Release
 /WebApiHost/obj/Release
+/ServiceShellHost/bin
+/ServiceShellHost/obj/Debug
+/ServiceShellHost/obj/Release

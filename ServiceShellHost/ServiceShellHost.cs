@@ -3,12 +3,12 @@ using System;
 using System.Reflection;
 using System.ServiceProcess;
 
-namespace WebApiHost
+namespace ServiceShellHost
 {
-    public partial class Service1 : ServiceBase
+    public partial class ServiceShellHost : ServiceBase
     {
         private IDisposable _apiServer = null;
-        public Service1()
+        public ServiceShellHost()
         {
             Assembly.Load("NewSky.WebApi");
             InitializeComponent();

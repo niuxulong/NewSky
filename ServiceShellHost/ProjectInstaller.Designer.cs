@@ -1,6 +1,6 @@
-﻿namespace WebApiHost
+﻿namespace ServiceShellHost
 {
-    partial class WebApiHostServiceTest
+	partial class ServiceShellHostTest
     {
         /// <summary>
         /// 必需的设计器变量。
