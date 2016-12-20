@@ -47,7 +47,7 @@
     <Content Include="app.js" />
     <Content Include="src\error.html" />
     <Content Include="src\index.html" />
-    <Content Include="src\script.js" />
+    <Content Include="src\index.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />

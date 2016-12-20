@@ -55,7 +55,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// just uncomment if you don't want use the www file to start the app by "npm start", otherwise please use "node app.js" to start app
+// just uncomment if you don't want to use the www file to start the app by "npm start", otherwise please use "node app.js" to start app
 //http.createServer(app).listen(3005, function () {
 //    console.log('Express server listening on port ' + app.get('port'));
 //});

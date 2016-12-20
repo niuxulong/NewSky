@@ -3,7 +3,7 @@ using NewSky.Platform.Interfaces;
 
 namespace NewSky.User.WebApi
 {
-	[InheritedExport(typeof(IProductControllerConfiguration))]
+	[Export(typeof(IProductControllerConfiguration))]
 	public class UserWebApiConfiguration : IProductControllerConfiguration
 	{
 		private readonly string baseUri;

@@ -8,7 +8,7 @@ using NewSky.Platform.Interfaces;
 
 namespace NewSky.Weather.WebApi
 {
-	[InheritedExport(typeof(IProductControllerConfiguration))]
+	[Export(typeof(IProductControllerConfiguration))]
 	public class WeatherWebApiConfiguration : IProductControllerConfiguration
     {
 		private readonly string baseUri;
