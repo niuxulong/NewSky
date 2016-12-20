@@ -15,3 +15,9 @@
 /ServiceShellHost/bin
 /ServiceShellHost/obj/Debug
 /ServiceShellHost/obj/Release
+/CloudBin
+/NewSky.Platform/bin/Debug
+/NewSky.Platform/obj/Debug
+/NewSky.WebApi/bin
+/ServiceTest/bin
+/ServiceTest/obj/Debug

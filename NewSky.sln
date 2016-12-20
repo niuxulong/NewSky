@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewSky.WebApi", "NewSky.Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewSkyWeb", "NewSkyWeb\NewSkyWeb.csproj", "{92724464-8FB1-4286-8C81-E297FDB699D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewSky.Platform", "NewSky.Platform\NewSky.Platform.csproj", "{1EBE3415-6BF5-4BDF-AF8D-2E1F7F0ACE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTest", "ServiceTest\ServiceTest.csproj", "{21FB22C0-3367-4E25-966D-A7D4BFA73B9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{92724464-8FB1-4286-8C81-E297FDB699D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92724464-8FB1-4286-8C81-E297FDB699D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92724464-8FB1-4286-8C81-E297FDB699D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBE3415-6BF5-4BDF-AF8D-2E1F7F0ACE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBE3415-6BF5-4BDF-AF8D-2E1F7F0ACE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBE3415-6BF5-4BDF-AF8D-2E1F7F0ACE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBE3415-6BF5-4BDF-AF8D-2E1F7F0ACE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FB22C0-3367-4E25-966D-A7D4BFA73B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FB22C0-3367-4E25-966D-A7D4BFA73B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FB22C0-3367-4E25-966D-A7D4BFA73B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FB22C0-3367-4E25-966D-A7D4BFA73B9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
