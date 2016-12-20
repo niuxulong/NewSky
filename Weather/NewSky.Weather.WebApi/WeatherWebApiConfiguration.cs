@@ -6,19 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using NewSky.Platform.Interfaces;
 
-namespace NewSky.WebApi
+namespace NewSky.Weather.WebApi
 {
 	[InheritedExport(typeof(IProductControllerConfiguration))]
-	public class NewSkyControllerConfiguration : IProductControllerConfiguration
-	{
+	public class WeatherWebApiConfiguration : IProductControllerConfiguration
+    {
 		private readonly string baseUri;
 
 		[ImportingConstructor]
-		public NewSkyControllerConfiguration()
+		public WeatherWebApiConfiguration()
 		{
-			this.baseUri = "http://127.0.0.1:8901/api/NewSky";
+			this.baseUri = "http://127.0.0.1:8901/api/Weather/";
 		}
-		
+
 		public string BaseUri
 		{
 			get { return this.baseUri; }

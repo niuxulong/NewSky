@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.IO;
-using System.Reflection;
+using System.Linq;
 using System.Windows.Forms;
 using NewSky.Platform.Interfaces;
 
@@ -10,10 +11,10 @@ namespace ServiceTest
 {
 	public partial class Form1 : Form
 	{
-		[Import]
-		private IServiceModule newSkyServiceModule;
+		[ImportMany]
+		private IEnumerable<IServiceModule> modules;
 
-		private CompositionContainer container;
+		private CompositionContainer IoC;
 
 		public Form1()
 		{
@@ -21,21 +22,28 @@ namespace ServiceTest
 			try
 			{
 				var appCatalog = new DirectoryCatalog(Directory.GetCurrentDirectory(), "NewSky*.dll");
-				container = new CompositionContainer(appCatalog);
-				container.ComposeParts(this);
+				IoC = new CompositionContainer(appCatalog);
+				IoC.ComposeParts(this);
 			}
 			catch (Exception ex)
 			{
-				if (container != null)
+				if (IoC != null)
 				{
-					container.Dispose();
+					IoC.Dispose();
 				}
 			}
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void btnStart_Click(object sender, EventArgs e)
 		{
-			newSkyServiceModule.OnStart();
+			modules.FirstOrDefault().OnStart();
+			ServiceInfo.Text = "Service is Running.";
+		}
+
+		private void btnStop_Click(object sender, EventArgs e)
+		{
+			modules.FirstOrDefault().OnStop();
+			ServiceInfo.Text = "Service is Stopped.";
 		}
 	}
 }

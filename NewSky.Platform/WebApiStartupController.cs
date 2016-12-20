@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Reflection;
 using Microsoft.Owin.Hosting;
@@ -9,25 +10,29 @@ namespace NewSky.Platform
 	[Export(typeof(IWebApiStartupController))]
 	public class WebApiStartupController : IWebApiStartupController
 	{
-		private IDisposable _apiServer = null;
-		private readonly IProductControllerConfiguration productControllerConfiguration;
+		private List<IDisposable> apiServers = new List<IDisposable>();
+
+		[ImportMany]
+		private IEnumerable<IProductControllerConfiguration> productControllerConfigurations;
 
 		[ImportingConstructor]
-		public WebApiStartupController(IProductControllerConfiguration productControllerConfiguration)
+		public WebApiStartupController()
 		{
-			this.productControllerConfiguration = productControllerConfiguration;
 		}
 
 		public void Start()
 		{
-			_apiServer = WebApp.Start<Startup>(url: productControllerConfiguration.BaseUri);
+			foreach (var config in productControllerConfigurations)
+			{
+				apiServers.Add(WebApp.Start<Startup>(url: config.BaseUri));
+			}
 		}
 
 		public void Stop()
 		{
-			if (_apiServer != null)
+			foreach (var apiServer in apiServers)
 			{
-				_apiServer.Dispose();
+				apiServer.Dispose();
 			}
 		}
 	}

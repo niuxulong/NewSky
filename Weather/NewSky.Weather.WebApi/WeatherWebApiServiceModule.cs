@@ -1,15 +1,15 @@
 ﻿using System.ComponentModel.Composition;
 using NewSky.Platform.Interfaces;
 
-namespace NewSky.WebApi
+namespace NewSky.Weather.WebApi
 {
 	[Export(typeof(IServiceModule)), PartCreationPolicy(CreationPolicy.Shared)]
-	public class NewSkyWebApiServiceModule : IServiceModule
+	public class WeatherWebApiServiceModule : IServiceModule
 	{
 		private readonly IWebApiStartupController webApiStartupController;
 
 		[ImportingConstructor]
-		public NewSkyWebApiServiceModule(IWebApiStartupController webApiStartupController)
+		public WeatherWebApiServiceModule(IWebApiStartupController webApiStartupController)
 		{
 			this.webApiStartupController = webApiStartupController;
 		}
