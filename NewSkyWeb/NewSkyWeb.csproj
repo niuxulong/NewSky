@@ -45,9 +45,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="src\app.js" />
+    <Content Include="src\bootstrap.js" />
     <Content Include="src\error.html" />
+    <Content Include="src\header\header.html" />
+    <Content Include="src\header\headerController.js" />
+    <Content Include="src\header\index.js" />
     <Content Include="src\index.html" />
-    <Content Include="src\index.js" />
+    <Content Include="src\main.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />

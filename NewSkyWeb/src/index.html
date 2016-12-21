@@ -1,21 +1,20 @@
 ﻿<!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
     <meta charset="utf-8">
     <title>New Sky</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container" ng-controller="InvoiceCntl">
+    <div class="container">
         <label class="text-primary">你好，我们是简单测试Demo。</label>
-        <div>
-            {{qty}}
-        </div>
+        <platform-header />
     </div>
 
 
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="index.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>-->
+    <script src="bower_components/requirejs/require.js" data-main="main.js"></script>
+    <!--<script src="index.js"></script>-->
 </body>
 </html>
