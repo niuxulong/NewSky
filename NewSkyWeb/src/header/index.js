@@ -3,7 +3,6 @@
 
     var headerModule = angular.module('app.header', []);
     headerModule.controller("headerController", headerController);
-    var headerTemplate;
     headerModule.directive('platformHeader', function () {
         return {
             restrict: "EA",
