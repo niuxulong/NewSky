@@ -1,10 +1,7 @@
-﻿define([
-    'angular',
-    './header/index'
-], function (angular) {
+﻿define(['angular','./header/index'], function (angular) {
     'use strict';
 
-    return angular.module('app', [
-        'app.header'
-    ]);
+    var appModule = angular.module('app', ['app.header']);
+
+    return appModule;
 });
