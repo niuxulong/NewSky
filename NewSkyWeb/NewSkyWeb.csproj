@@ -46,6 +46,38 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="src\app.js" />
+    <Content Include="src\assets\css\bootstrap-theme.min.css" />
+    <Content Include="src\assets\css\bootstrap.css" />
+    <Content Include="src\assets\css\custom-styles.css" />
+    <Content Include="src\assets\css\font-awesome.css" />
+    <Content Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\img\bg-img.jpg" />
+    <Content Include="src\assets\js\bootstrap.min.js" />
+    <Content Include="src\assets\js\chart-data.js" />
+    <Content Include="src\assets\js\chart.min.js" />
+    <Content Include="src\assets\js\custom-scripts.js" />
+    <Content Include="src\assets\js\custom.js" />
+    <Content Include="src\assets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="src\assets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="src\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="src\assets\js\easypiechart-data.js" />
+    <Content Include="src\assets\js\easypiechart.js" />
+    <Content Include="src\assets\js\jquery-1.10.2.js" />
+    <Content Include="src\assets\js\jquery.metisMenu.js" />
+    <Content Include="src\assets\js\Lightweight-Chart\chart.js" />
+    <Content Include="src\assets\js\Lightweight-Chart\cssCharts.css" />
+    <Content Include="src\assets\js\Lightweight-Chart\index - Copy.html" />
+    <Content Include="src\assets\js\Lightweight-Chart\index.html" />
+    <Content Include="src\assets\js\Lightweight-Chart\jquery.chart.js" />
+    <Content Include="src\assets\js\Lightweight-Chart\jquery.chart.min.js" />
+    <Content Include="src\assets\js\morris\morris-0.4.3.min.css" />
+    <Content Include="src\assets\js\morris\morris.js" />
+    <Content Include="src\assets\js\morris\raphael-2.1.0.min.js" />
+    <Content Include="src\assets\materialize\css\materialize.css" />
+    <Content Include="src\assets\materialize\css\materialize.min.css" />
+    <Content Include="src\assets\materialize\js\materialize.js" />
+    <Content Include="src\assets\materialize\js\materialize.min.js" />
     <Content Include="src\bootstrap.js" />
     <Content Include="src\error.html" />
     <Content Include="src\header\header.html" />
@@ -56,6 +88,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
+    <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <None Include="src\assets\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="src\assets\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="src\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="src\assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="src\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="src\assets\js\Lightweight-Chart\README.md" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Bold.eot" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Bold.ttf" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Bold.woff" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Bold.woff2" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Light.eot" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Light.ttf" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Light.woff" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Light.woff2" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Medium.eot" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Medium.ttf" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Medium.woff" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Medium.woff2" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Regular.eot" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Regular.ttf" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Regular.woff" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Regular.woff2" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.eot" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.ttf" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
+    <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
