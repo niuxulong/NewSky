@@ -2,17 +2,16 @@
     // alias libraries paths
     paths: {
         'domReady': './bower_components/requirejs-domready/domReady',
-        'angular': './bower_components/angular/angular.min'
+        'angular': './bower_components/angular/angular.min',
+        'angular-materialize': './assets/angular-materialize/js/angular-materialize.min'
     },
 
-    // angular does not support AMD out of the box, put it in a shim
     shim: {
         'angular': {
             exports: 'angular'
         }
     },
-
-    // kick start application
+    
     deps: ['./bootstrap']
 });
 
