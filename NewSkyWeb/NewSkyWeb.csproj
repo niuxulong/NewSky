@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
-    <Content Include="src\app.js" />
     <Content Include="src\assets\css\bootstrap-theme.min.css" />
     <Content Include="src\assets\css\bootstrap.css" />
     <Content Include="src\assets\css\custom-styles.css" />
@@ -83,10 +82,7 @@
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
     <Content Include="src\platform\header\header.html" />
-    <Content Include="src\platform\header\headerController.js" />
-    <Content Include="src\platform\index.js" />
     <Content Include="src\platform\menu\menu.html" />
-    <Content Include="src\platform\menu\menuController.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
@@ -120,8 +116,30 @@
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\platform\header\headerController.ts" />
+    <TypeScriptCompile Include="src\platform\index.ts" />
+    <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

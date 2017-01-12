@@ -11,7 +11,7 @@
             exports: 'angular'
         }
     },
-    
+
     deps: ['./bootstrap']
 });
 
