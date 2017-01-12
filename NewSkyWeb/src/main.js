@@ -1,8 +1,8 @@
 ﻿require.config({
     // alias libraries paths
     paths: {
-        'domReady': './bower_components/requirejs-domready/domReady',
-        'angular': './bower_components/angular/angular.min',
+        'domReady': './vendor/requirejs-domready/domReady',
+        'angular': './vendor/angular/angular.min',
         'angular-materialize': './assets/angular-materialize/js/angular-materialize.min'
     },
 
