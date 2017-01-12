@@ -80,11 +80,13 @@
     <Content Include="src\assets\materialize\js\materialize.min.js" />
     <Content Include="src\bootstrap.js" />
     <Content Include="src\error.html" />
-    <Content Include="src\header\header.html" />
-    <Content Include="src\header\headerController.js" />
-    <Content Include="src\header\index.js" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
+    <Content Include="src\platform\header\header.html" />
+    <Content Include="src\platform\header\headerController.js" />
+    <Content Include="src\platform\index.js" />
+    <Content Include="src\platform\menu\menu.html" />
+    <Content Include="src\platform\menu\menuController.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />

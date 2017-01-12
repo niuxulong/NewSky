@@ -1,8 +1,8 @@
-﻿define(['angular','./header/index'], function (angular) {
+﻿define(['angular','./platform/index'], function (angular) {
 
         'use strict';
 
-        var appModule = angular.module('app', ['ui.materialize', 'app.header']);
+        var appModule = angular.module('app', ['ui.materialize', 'app.platform']);
 
     return appModule;
 });
