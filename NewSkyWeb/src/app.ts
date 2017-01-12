@@ -1,4 +1,4 @@
-﻿/// <reference path="../typings/angular.d.ts" />
+﻿/// <reference path="../typings/angular/angular.d.ts" />
 
 import angular = require('angular');
 import platformModule = require("./platform/index");

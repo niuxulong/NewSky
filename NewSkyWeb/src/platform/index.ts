@@ -1,4 +1,4 @@
-﻿/// <reference path="../../typings/angular.d.ts" />
+﻿/// <reference path="../../typings/angular/angular.d.ts" />
 
 import angular = require('angular');
 import headerController = require("./header/headerController");
@@ -7,6 +7,8 @@ import menuController = require("./menu/menuController");
 var platformModule = angular.module('app.platform', []);
 
 platformModule.controller("headerController", headerController);
+platformModule.controller("menuController", menuController);
+
 platformModule.directive('platformHeader', function () {
     return {
         restrict: "EA",
@@ -16,7 +18,7 @@ platformModule.directive('platformHeader', function () {
         controller: 'headerController',
     };
 });
-platformModule.controller("menuController", headerController);
+
 platformModule.directive('platformMenu', function () {
     return {
         restrict: "EA",
