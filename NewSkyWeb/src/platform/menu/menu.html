@@ -2,14 +2,18 @@
     <nav class="navbar-default navbar-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="main-menu">
-                <li>
-                    <a class="active-menu waves-effect waves-dark">
+                <li ui-sref-active="active">
+                    <a class="waves-effect waves-dark" ui-sref="dashboard"
+                       ng-class="{'active-menu': menuInstance.selectedMenu == 'Dashboard'}"
+                       ng-click="menuInstance.dashboardClick()">
                         <i class="fa fa-dashboard"></i>
                         Dashboard
                     </a>
                 </li>
                 <li>
-                    <a class="waves-effect waves-dark" ng-click="menuItemClick()">
+                    <a class="waves-effect waves-dark" ui-sref="uiElements"
+                       ng-class="{'active-menu': menuInstance.selectedMenu == 'UIElements'}"
+                       ng-click="menuInstance.uiElementsClick()">
                         <i class="fa fa-desktop"></i>
                         UI Elements
                     </a>

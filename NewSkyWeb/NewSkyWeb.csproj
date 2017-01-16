@@ -62,8 +62,6 @@
     <Content Include="src\assets\js\dataTables\jquery.dataTables.js" />
     <Content Include="src\assets\js\easypiechart-data.js" />
     <Content Include="src\assets\js\easypiechart.js" />
-    <Content Include="src\assets\js\jquery-1.10.2.js" />
-    <Content Include="src\assets\js\jquery.metisMenu.js" />
     <Content Include="src\assets\js\Lightweight-Chart\chart.js" />
     <Content Include="src\assets\js\Lightweight-Chart\cssCharts.css" />
     <Content Include="src\assets\js\Lightweight-Chart\index - Copy.html" />
@@ -81,8 +79,11 @@
     <Content Include="src\error.html" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
+    <Content Include="src\platform\content\dashboard.html" />
+    <Content Include="src\platform\content\uiElements.html" />
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\menu\menu.html" />
+    <Content Include="src\routes.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
@@ -118,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\platform\content\dashboardController.ts" />
+    <TypeScriptCompile Include="src\platform\content\uiElementsController.ts" />
     <TypeScriptCompile Include="src\platform\header\headerController.ts" />
     <TypeScriptCompile Include="src\platform\index.ts" />
     <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
