@@ -1,10 +1,12 @@
 ﻿class MenuController {
-    static $inject = ["$scope"];
+    static $inject = ["$scope", "$state"];
 
     private selectedMenu: string = "Dashboard";
 
-    constructor($scope) {
+    constructor(private $scope, private stateProvider) {
         $scope.menuInstance = this;
+
+        this.stateProvider.go("dashboard");
     }
 
     private dashboardClick() {
