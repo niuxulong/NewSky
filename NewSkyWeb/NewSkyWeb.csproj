@@ -41,9 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="src\assets\css\bootstrap-theme.min.css" />
     <Content Include="src\assets\css\bootstrap.css" />
     <Content Include="src\assets\css\custom-styles.css" />
@@ -121,6 +118,9 @@
     <TypeScriptCompile Include="src\platform\header\headerController.ts" />
     <TypeScriptCompile Include="src\platform\index.ts" />
     <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
