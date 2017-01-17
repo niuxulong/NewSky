@@ -44,7 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.js" />
     <Content Include="src\assets\css\bootstrap-theme.min.css" />
     <Content Include="src\assets\css\bootstrap.css" />
     <Content Include="src\assets\css\custom-styles.css" />
@@ -85,7 +84,6 @@
     <Content Include="src\platform\menu\menu.html" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="package.json" />
     <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
     <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.ttf" />
     <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.woff" />
