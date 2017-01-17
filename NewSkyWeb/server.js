@@ -12,8 +12,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'src'));
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
+app.set('port', 3456);
 
-app.use(favicon(path.join(__dirname, 'src', 'favicon.ico')));
+app.use(favicon(path.join(__dirname,'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -55,9 +56,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// just uncomment if you don't want to use the www file to start the app by "npm start", otherwise please use "node app.js" to start app
-//http.createServer(app).listen(3005, function () {
-//    console.log('Express server listening on port ' + app.get('port'));
-//});
+http.createServer(app).listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
+});
 
 module.exports = app;

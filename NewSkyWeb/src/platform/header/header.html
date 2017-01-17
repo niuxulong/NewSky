@@ -5,8 +5,8 @@
                 <i class="large material-icons">insert_chart</i>
                 <strong>New Sky</strong>
             </a>
-            <div id="sideNav" href="">
-                <i class="material-icons dp48">toc</i>
+            <div id="sideNav">
+                <i class="material-icons dp48" ng-class="{'closed': headerInstance.isMenuClosed}" ng-click="headerInstance.sideNavClick()">toc</i>
             </div>
         </div>
         <ul class="nav navbar-top-links navbar-right">

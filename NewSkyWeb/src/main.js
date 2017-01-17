@@ -1,5 +1,4 @@
 ﻿require.config({
-    // alias libraries paths
     paths: {
         'domReady': './vendor/requirejs-domready/domReady',
         'angular': './vendor/angular/angular.min',

@@ -16,7 +16,7 @@ platformModule.controller("uiElementsController", uiElementsController);
 platformModule.directive('platformHeader', function () {
     return {
         restrict: "EA",
-        scope: {},
+        //scope: {},
         replace: true,
         templateUrl: './platform/header/header.html',
         controller: 'headerController',
@@ -28,7 +28,7 @@ platformModule.directive('platformHeader', function () {
 platformModule.directive('platformMenu', function () {
     return {
         restrict: "EA",
-        scope: {},
+        //scope: {},
         replace: true,
         templateUrl: './platform/menu/menu.html',
         controller: 'menuController',

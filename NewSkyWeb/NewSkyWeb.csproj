@@ -83,7 +83,6 @@
     <Content Include="src\platform\content\uiElements.html" />
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\menu\menu.html" />
-    <Content Include="src\routes.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
