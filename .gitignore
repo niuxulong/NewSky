@@ -25,3 +25,15 @@
 /User/NewSky.User.WebApi/bin/Debug
 /User/NewSky.User.WebApi/obj/Debug
 /NewSkyWeb/node_modules
+/NewSkyWeb/src/platform/content/dashboardController.js
+/NewSkyWeb/src/platform/content/dashboardController.js.map
+/NewSkyWeb/src/platform/content/uiElementsController.js
+/NewSkyWeb/src/platform/content/uiElementsController.js.map
+/NewSkyWeb/src/platform/header/headerController.js
+/NewSkyWeb/src/platform/header/headerController.js.map
+/NewSkyWeb/src/platform/menu/menuController.js
+/NewSkyWeb/src/platform/menu/menuController.js.map
+/NewSkyWeb/src/platform/index.js
+/NewSkyWeb/src/platform/index.js.map
+/NewSkyWeb/src/app.js
+/NewSkyWeb/src/app.js.map
