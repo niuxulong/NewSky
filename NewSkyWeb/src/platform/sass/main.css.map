@@ -1,0 +1,15 @@
+﻿{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"common/common.scss",
+		"content/dashboard.scss",
+		"content/uiElements.scss",
+		"header/header.scss",
+		"menu/menu.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "ACAA,IAAI,CAAC;EACD,WAAW,EAAE,uBAAwB;EACrC,UAAU,EAAE,OAAQ;CAFlB",
+	"names": []
+}
