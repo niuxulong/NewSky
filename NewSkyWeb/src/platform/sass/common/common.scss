@@ -11,6 +11,14 @@
     top: 55px;
     -moz-box-shadow: 0 0 10px #757575;
     margin-left: 260px;
+    -moz-transition: margin-left 0.5s;
+    -o-transition: margin-left 0.5s;
+    -webkit-transition: margin-left 0.5s;
+    transition: margin-left 0.5s;
+}
+
+.comm-page-marge-left-when-menu-collapse{
+    margin-left: 0;
 }
 
 .comm-page-inner {

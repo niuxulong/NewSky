@@ -5,6 +5,10 @@
     background-color: #ffffff;
     border-bottom: none;
     z-index: 300;
+    
+    div > i:hover{
+        color: #30cc7b;
+    }
 }
 
 .header-navbar-brand {

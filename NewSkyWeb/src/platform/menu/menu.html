@@ -1,9 +1,9 @@
 ﻿<div>
-    <nav class="menu-navbar-side">
+    <nav class="menu-navbar-side" ng-class="{'menu-margin-left-collapse' : menuInstance.isMenuOpened === false}">
         <ul>
             <li>
                 <a class="waves-effect waves-dark" ui-sref="dashboard"
-                   ng-class="{'menu-active-menu': menuInstance.selectedMenu == 'Dashboard'}"
+                   ng-class="{'menu-active-menu': menuInstance.selectedMenu === 'Dashboard'}"
                    ng-click="menuInstance.dashboardClick()">
                     <i class="fa fa-dashboard"></i>
                     Dashboard
@@ -11,7 +11,7 @@
             </li>
             <li>
                 <a class="waves-effect waves-dark" ui-sref="uiElements"
-                   ng-class="{'menu-active-menu': menuInstance.selectedMenu == 'UIElements'}"
+                   ng-class="{'menu-active-menu': menuInstance.selectedMenu === 'UIElements'}"
                    ng-click="menuInstance.uiElementsClick()">
                     <i class="fa fa-desktop"></i>
                     UI Elements

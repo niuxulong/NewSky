@@ -43,7 +43,6 @@
   <ItemGroup>
     <Content Include="src\assets\css\bootstrap-theme.min.css" />
     <Content Include="src\assets\css\bootstrap.css" />
-    <Content Include="src\assets\css\custom-styles.css" />
     <Content Include="src\assets\css\font-awesome.css" />
     <Content Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.svg" />
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
@@ -77,11 +76,29 @@
     <Content Include="src\platform\content\contentShell.html" />
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\menu\menu.html" />
+    <Content Include="src\platform\sass\common\common.css">
+      <DependentUpon>common.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\common\common.min.css">
+      <DependentUpon>common.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\header\header.css">
+      <DependentUpon>header.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\header\header.min.css">
+      <DependentUpon>header.css</DependentUpon>
+    </Content>
     <Content Include="src\platform\sass\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>
     <Content Include="src\platform\sass\main.min.css">
       <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\menu\menu.css">
+      <DependentUpon>menu.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\menu\menu.min.css">
+      <DependentUpon>menu.css</DependentUpon>
     </Content>
     <Content Include="src\uiElements\uiElements.html" />
   </ItemGroup>
@@ -115,12 +132,21 @@
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.ttf" />
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
+    <None Include="src\platform\sass\common\common.css.map">
+      <DependentUpon>common.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\common\common.scss" />
+    <None Include="src\platform\sass\header\header.css.map">
+      <DependentUpon>header.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\header\header.scss" />
     <None Include="src\platform\sass\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </None>
     <None Include="src\platform\sass\main.scss" />
+    <None Include="src\platform\sass\menu\menu.css.map">
+      <DependentUpon>menu.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\menu\menu.scss" />
   </ItemGroup>
   <ItemGroup>

@@ -1,1 +1,4 @@
-﻿<div class="comm-page-wrapper" ui-view="content"></div>
+﻿<div class="comm-page-wrapper" 
+     ng-class="{'comm-page-marge-left-when-menu-collapse': !contentShellInstance.isMenuOpened}" 
+     ui-view="content">
+</div>

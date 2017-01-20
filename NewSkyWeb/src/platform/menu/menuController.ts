@@ -1,7 +1,8 @@
 ﻿class MenuController {
     static $inject = ["$scope", "$state"];
 
-    private selectedMenu: string = "Dashboard";
+    private selectedMenu: string= "Dashboard";
+    private isMenuOpened: boolean= true;
 
     constructor(private scope, private stateProvider) {
         scope.menuInstance = this;
@@ -18,8 +19,8 @@
         this.selectedMenu = 'UIElements';
     }
 
-    private onAnimateMenu() {
-        alert("djfjkdjksdfjkd");
+    private onAnimateMenu = ():void => {
+        this.isMenuOpened = !this.isMenuOpened;
     }
 }
 
