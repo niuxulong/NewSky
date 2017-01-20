@@ -5,7 +5,7 @@ using System.ComponentModel.Composition.Hosting;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using NewSky.Platform.Interfaces;
+using NewSky.Platform.Api.WebApi.Interfaces;
 
 namespace ServiceTest
 {

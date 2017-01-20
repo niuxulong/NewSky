@@ -2,7 +2,6 @@
 using System;
 using System.Reflection;
 using System.ServiceProcess;
-using NewSky.Platform;
 
 namespace ServiceShellHost
 {

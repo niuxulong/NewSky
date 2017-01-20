@@ -48,3 +48,6 @@
 /NewSkyWeb/src/uiElements/index.js.map
 /NewSkyWeb/src/uiElements/uiElementsController.js
 /NewSkyWeb/src/uiElements/uiElementsController.js.map
+/Cloud/Platform/NewSky.Platform.Api/bin/Debug
+/Cloud/Platform/NewSky.Platform.Api/obj/Debug
+/Cloud/Platform/NewSky.Platform.WebApi/obj/Debug
