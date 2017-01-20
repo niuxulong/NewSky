@@ -1,64 +1,22 @@
 ﻿<div>
-    <nav class="navbar-default navbar-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="main-menu">
-                <li>
-                    <a class="waves-effect waves-dark" ui-sref="dashboard"
-                       ng-class="{'active-menu': menuInstance.selectedMenu == 'Dashboard'}"
-                       ng-click="menuInstance.dashboardClick()">
-                        <i class="fa fa-dashboard"></i>
-                        Dashboard
-                    </a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-dark" ui-sref="uiElements"
-                       ng-class="{'active-menu': menuInstance.selectedMenu == 'UIElements'}"
-                       ng-click="menuInstance.uiElementsClick()">
-                        <i class="fa fa-desktop"></i>
-                        UI Elements
-                    </a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-dark">
-                        <i class="fa fa-bar-chart-o"></i>
-                        Charts
-                    </a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-dark">
-                        <i class="fa fa-qrcode"></i>
-                        Tabs & Panels
-                    </a>
-                </li>
-
-                <li>
-                    <a class="waves-effect waves-dark">
-                        <i class="fa fa-table"></i>
-                        Responsive Tables
-                    </a>
-                </li>
-                <li>
-                    <a class="waves-effect waves-dark">
-                        <i class="fa fa-edit"></i>
-                        Forms
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect waves-dark">
-                        <i class="fa fa-sitemap"></i>
-                        Multi-Level Dropdown
-                        <span class="fa arrow"></span>
-                    </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">Second Level Link</a>
-                        </li>
-                        <li>
-                            <a href="#">Second Level Link</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <nav class="menu-navbar-side">
+        <ul>
+            <li>
+                <a class="waves-effect waves-dark" ui-sref="dashboard"
+                   ng-class="{'menu-active-menu': menuInstance.selectedMenu == 'Dashboard'}"
+                   ng-click="menuInstance.dashboardClick()">
+                    <i class="fa fa-dashboard"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a class="waves-effect waves-dark" ui-sref="uiElements"
+                   ng-class="{'menu-active-menu': menuInstance.selectedMenu == 'UIElements'}"
+                   ng-click="menuInstance.uiElementsClick()">
+                    <i class="fa fa-desktop"></i>
+                    UI Elements
+                </a>
+            </li>
+        </ul>
     </nav>
 </div>

@@ -8,11 +8,6 @@ http://creativecommons.org/licenses/by/3.0/
 /*----------------------------------------------
     COMMON  STYLES    
 ------------------------------------------------*/
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: #2c445a;
-}
-
  #wrapper {
     width: 100%;
 }
@@ -31,12 +26,6 @@ body {
 }
 .header .container-fluid{
 padding:0;
-}
-.text-center {
-    text-align:center;
-}
-.no-boder {
-    border:1px solid #f3f3f3;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -65,10 +54,20 @@ p {
     z-index: 0; 
 }
 .panel{
-border-radius:0px;
+    border-radius:0px;
 }
-.navbar-side .nav > li > a > i{color: rgba(255, 255, 255, 0.62);padding: 8px;width: 20px;text-align: center;font-size: 14px;}
+
+.navbar-side li > a > i
+{
+    color: rgba(255, 255, 255, 0.62);
+    padding: 8px;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
 .top-navbar{position: fixed;width: 100%;z-index: 300;-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);-moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);}
+
 .navbar-side {
   z-index: 2;
   position: fixed;
@@ -76,6 +75,9 @@ border-radius:0px;
   top: 80px;
   box-shadow: none;
 }
+
+
+
 #page-wrapper {
   position: relative;
   top: 55px;
@@ -122,12 +124,7 @@ border-color: #075CB3;
   background-color: #F09B22;
   border-radius: 10px;
 }
-.closed{
-	-ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);	
-}
-.closed i{color: #adadad;}
+
 /*----------------------------------------------
    DASHBOARD STYLES    
 ------------------------------------------------*/
@@ -370,10 +367,21 @@ max-width:170px;
 .top-navbar{
 margin:0px;
 }
-.top-navbar .navbar-brand {color: #fff;width: 260px;text-align: left;height: 60px;font-size: 24px;font-weight: 700;/* text-transform: uppercase; */line-height: 30px;background: #30cc7b;}
-.navbar-brand b{
-color: #4BD28C;
+.top-navbar .navbar-brand 
+{
+    color: #fff;
+    width: 260px;
+    text-align: left;height: 60px;
+    font-size: 24px;font-weight: 700;/* text-transform: uppercase; */
+    line-height: 30px;
+    background: #30cc7b;
+
 }
+
+.navbar-brand b{
+    color: #4BD28C;
+}
+
 .top-navbar .nav > li {
 position: relative;
 display: inline-block;
@@ -410,11 +418,7 @@ font-size: 13px;
 line-height: 21px;
 padding-top: 4px;
 }
-.active-menu, .active-menu i {
-    background-color: #233342 !important;
-    color: #fff !important;
-}
-.active-menu i{color: #30cc7b !important;}
+
 .arrow {
     float: right;
     margin-top: 8px;
@@ -428,37 +432,6 @@ padding-top: 4px;
     content: "\f107";
 }
 
-
-.nav-second-level li,
-.nav-third-level li {
-    border-bottom: none !important;
-}
-
-.nav-second-level li a {
-    padding-left: 37px;
-}
-
-.nav-third-level li a {
-    padding-left: 55px;
-}
-.sidebar-collapse , .sidebar-collapse .nav{
-	background:none;
-}
-.sidebar-collapse .nav {
-	padding:0;
-}
-.sidebar-collapse .nav > li > a {
-	color: rgba(255, 255, 255, 0.47);
-	background:transparent;
-	text-shadow:none;
-}
-.sidebar-collapse > .nav > li > a {
-	padding: 8px;
-	font-size: 14px;
-}
-.sidebar-collapse > .nav > li {
-	border-bottom: 1px solid rgba(107, 108, 109, 0.19);
-}
 ul.nav.nav-second-level.collapse.in {background: #0f2a3f;}
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {

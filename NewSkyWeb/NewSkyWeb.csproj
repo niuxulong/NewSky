@@ -51,8 +51,6 @@
     <Content Include="src\assets\js\bootstrap.min.js" />
     <Content Include="src\assets\js\chart-data.js" />
     <Content Include="src\assets\js\chart.min.js" />
-    <Content Include="src\assets\js\custom-scripts.js" />
-    <Content Include="src\assets\js\custom.js" />
     <Content Include="src\assets\js\dataTables\dataTables.bootstrap.css" />
     <Content Include="src\assets\js\dataTables\dataTables.bootstrap.js" />
     <Content Include="src\assets\js\dataTables\jquery.dataTables.js" />
@@ -79,11 +77,35 @@
     <Content Include="src\platform\content\uiElements.html" />
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\menu\menu.html" />
+    <Content Include="src\platform\sass\common\common.css">
+      <DependentUpon>common.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\common\common.min.css">
+      <DependentUpon>common.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\content\dashboard.css">
+      <DependentUpon>dashboard.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\content\dashboard.min.css">
+      <DependentUpon>dashboard.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\header\header.css">
+      <DependentUpon>header.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\header\header.min.css">
+      <DependentUpon>header.css</DependentUpon>
+    </Content>
     <Content Include="src\platform\sass\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>
     <Content Include="src\platform\sass\main.min.css">
       <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\menu\menu.css">
+      <DependentUpon>menu.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\menu\menu.min.css">
+      <DependentUpon>menu.css</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -116,14 +138,26 @@
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.ttf" />
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff" />
     <None Include="src\assets\materialize\fonts\roboto\Roboto-Thin.woff2" />
+    <None Include="src\platform\sass\common\common.css.map">
+      <DependentUpon>common.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\common\common.scss" />
+    <None Include="src\platform\sass\content\dashboard.css.map">
+      <DependentUpon>dashboard.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\content\dashboard.scss" />
     <None Include="src\platform\sass\content\uiElements.scss" />
+    <None Include="src\platform\sass\header\header.css.map">
+      <DependentUpon>header.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\header\header.scss" />
     <None Include="src\platform\sass\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </None>
     <None Include="src\platform\sass\main.scss" />
+    <None Include="src\platform\sass\menu\menu.css.map">
+      <DependentUpon>menu.css</DependentUpon>
+    </None>
     <None Include="src\platform\sass\menu\menu.scss" />
   </ItemGroup>
   <ItemGroup>
