@@ -3,6 +3,7 @@ using NewSky.Platform.Api.WebApi.Interfaces;
 
 namespace NewSky.Platform.WebApi
 {
+	[Export(typeof(IProductControllerConfiguration))]
 	public class WebApiConfiguration : IProductControllerConfiguration
     {
 		private readonly string baseUri;
@@ -10,7 +11,7 @@ namespace NewSky.Platform.WebApi
 		[ImportingConstructor]
 		public WebApiConfiguration()
 		{
-			this.baseUri = "http://127.0.0.1:8901/api/User/";
+			this.baseUri = "http://127.0.0.1:8901/api/platform/";
 		}
 
 		public string BaseUri

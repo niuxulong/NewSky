@@ -6,22 +6,22 @@ namespace NewSky.Platform.WebApi
 	[Export(typeof(IServiceModule)), PartCreationPolicy(CreationPolicy.Shared)]
 	public class WebApiServiceModule : IServiceModule
 	{
-		private readonly IWebApiStartupController webApiServiceModule;
+		private readonly IWebApiStartupController webApiStartupController;
 		
 		[ImportingConstructor]
 		public WebApiServiceModule(IWebApiStartupController webApiStartupController)
 		{
-			this.webApiServiceModule = webApiStartupController;
+			this.webApiStartupController = webApiStartupController;
 		}
 
 		public void OnStart()
 		{
-			webApiServiceModule.Start();
+			webApiStartupController.Start();
 		}
 
 		public void OnStop()
 		{
-			webApiServiceModule.Stop();
+			webApiStartupController.Stop();
 		}
 	}
 }
