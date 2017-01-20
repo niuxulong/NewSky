@@ -70,12 +70,11 @@
     <Content Include="src\assets\materialize\js\materialize.js" />
     <Content Include="src\assets\materialize\js\materialize.min.js" />
     <Content Include="src\bootstrap.js" />
+    <Content Include="src\dashboard\dashboard.html" />
     <Content Include="src\error.html" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
     <Content Include="src\platform\content\contentShell.html" />
-    <Content Include="src\platform\content\dashboard.html" />
-    <Content Include="src\platform\content\uiElements.html" />
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\menu\menu.html" />
     <Content Include="src\platform\sass\common\common.css">
@@ -108,6 +107,7 @@
     <Content Include="src\platform\sass\menu\menu.min.css">
       <DependentUpon>menu.css</DependentUpon>
     </Content>
+    <Content Include="src\uiElements\uiElements.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
@@ -163,12 +163,14 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\dashboard\dashboardController.ts" />
+    <TypeScriptCompile Include="src\dashboard\index.ts" />
     <TypeScriptCompile Include="src\platform\content\contentShellController.ts" />
-    <TypeScriptCompile Include="src\platform\content\dashboardController.ts" />
-    <TypeScriptCompile Include="src\platform\content\uiElementsController.ts" />
     <TypeScriptCompile Include="src\platform\header\headerController.ts" />
     <TypeScriptCompile Include="src\platform\index.ts" />
     <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
+    <TypeScriptCompile Include="src\uiElements\index.ts" />
+    <TypeScriptCompile Include="src\uiElements\uiElementsController.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
