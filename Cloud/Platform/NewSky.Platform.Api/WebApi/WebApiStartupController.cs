@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Linq;
 using Microsoft.Owin.Hosting;
 using NewSky.Platform.Api.WebApi.Interfaces;
 
@@ -9,30 +10,25 @@ namespace NewSky.Platform.Api.WebApi
 	[Export(typeof(IWebApiStartupController))]
 	public class WebApiStartupController : IWebApiStartupController
 	{
-		private List<IDisposable> apiServers = new List<IDisposable>();
+		private IDictionary<string, IDisposable> apiServers = new Dictionary<string, IDisposable>();
 
-		[ImportMany]
-		private IEnumerable<IProductControllerConfiguration> productControllerConfigurations;
+		private IDictionary<string, IProductControllerConfiguration> productControllerConfigurationsDic;
 
 		[ImportingConstructor]
-		public WebApiStartupController()
+		public WebApiStartupController([ImportMany] IEnumerable<IProductControllerConfiguration> productControllerConfigurations)
 		{
+			this.productControllerConfigurationsDic = productControllerConfigurations.ToDictionary(x => x.ApiName, x => x);
 		}
 
-		public void Start()
+		public void Start(string apiName)
 		{
-			foreach (var config in productControllerConfigurations)
-			{
-				apiServers.Add(WebApp.Start<Startup>(url: config.BaseUri));
-			}
+			var config = productControllerConfigurationsDic[apiName];
+			apiServers.Add(config.ApiName, WebApp.Start<Startup>(url: config.BaseUri));
 		}
 
-		public void Stop()
+		public void Stop(string apiName)
 		{
-			foreach (var apiServer in apiServers)
-			{
-				apiServer.Dispose();
-			}
+			apiServers[apiName].Dispose();
 		}
 	}
 }

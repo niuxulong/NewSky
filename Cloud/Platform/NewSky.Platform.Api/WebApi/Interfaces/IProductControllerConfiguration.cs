@@ -3,5 +3,7 @@
 	public interface IProductControllerConfiguration
 	{
 		string BaseUri { get; }
+
+		string ApiName { get; }
 	}
 }

@@ -2,8 +2,8 @@
 {
 	public interface IWebApiStartupController
 	{
-		void Start();
+		void Start(string apiName);
 
-		void Stop();
+		void Stop(string apiName);
 	}
 }

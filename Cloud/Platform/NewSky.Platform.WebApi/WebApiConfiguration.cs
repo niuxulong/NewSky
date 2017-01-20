@@ -7,16 +7,23 @@ namespace NewSky.Platform.WebApi
 	public class WebApiConfiguration : IProductControllerConfiguration
     {
 		private readonly string baseUri;
+		private readonly string apiName;
 
 		[ImportingConstructor]
 		public WebApiConfiguration()
 		{
-			this.baseUri = "http://127.0.0.1:8901/api/platform/";
+			this.baseUri = Constants.PLATFORM_WEBAPI_BASEURI;
+			this.apiName = Constants.PLATFORM_WEBAPI;
 		}
 
 		public string BaseUri
 		{
 			get { return this.baseUri; }
+		}
+
+		public string ApiName
+		{
+			get { return this.apiName; }
 		}
     }
 }

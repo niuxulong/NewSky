@@ -16,12 +16,12 @@ namespace NewSky.Platform.WebApi
 
 		public void OnStart()
 		{
-			webApiStartupController.Start();
+			webApiStartupController.Start(Constants.PLATFORM_WEBAPI);
 		}
 
 		public void OnStop()
 		{
-			webApiStartupController.Stop();
+			webApiStartupController.Stop(Constants.PLATFORM_WEBAPI);
 		}
 	}
 }

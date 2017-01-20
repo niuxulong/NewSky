@@ -36,13 +36,21 @@ namespace ServiceTest
 
 		private void btnStart_Click(object sender, EventArgs e)
 		{
-			modules.FirstOrDefault().OnStart();
+			foreach (var module in modules)
+			{
+				module.OnStart();
+			}
+
 			ServiceInfo.Text = "Service is Running.";
 		}
 
 		private void btnStop_Click(object sender, EventArgs e)
 		{
-			modules.FirstOrDefault().OnStop();
+			foreach (var module in modules)
+			{
+				module.OnStop();
+			}
+
 			ServiceInfo.Text = "Service is Stopped.";
 		}
 	}
