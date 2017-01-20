@@ -73,6 +73,7 @@
     <Content Include="src\error.html" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
+    <Content Include="src\platform\content\contentShell.html" />
     <Content Include="src\platform\content\dashboard.html" />
     <Content Include="src\platform\content\uiElements.html" />
     <Content Include="src\platform\header\header.html" />
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\platform\content\contentShellController.ts" />
     <TypeScriptCompile Include="src\platform\content\dashboardController.ts" />
     <TypeScriptCompile Include="src\platform\content\uiElementsController.ts" />
     <TypeScriptCompile Include="src\platform\header\headerController.ts" />
