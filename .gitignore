@@ -51,3 +51,5 @@
 /Cloud/Platform/NewSky.Platform.Api/bin/Debug
 /Cloud/Platform/NewSky.Platform.Api/obj/Debug
 /Cloud/Platform/NewSky.Platform.WebApi/obj/Debug
+/Cloud/Platform/NewSky.Platform.Service/obj/Debug
+/packages
