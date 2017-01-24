@@ -1,0 +1,16 @@
+﻿<div>
+    <div ng-if="!appShellInstance.authData">
+        <platform-login/>
+</div>
+    <div ng-if="appShellInstance.authData">
+        <div>
+            <platform-header />
+        </div>
+        <div>
+            <platform-menu />
+        </div>
+        <div>
+            <platform-content />
+        </div>
+    </div>
+</div>

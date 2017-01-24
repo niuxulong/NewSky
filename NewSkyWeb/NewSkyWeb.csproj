@@ -73,8 +73,10 @@
     <Content Include="src\error.html" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
+    <Content Include="src\platform\appShell\appShell.html" />
     <Content Include="src\platform\content\contentShell.html" />
     <Content Include="src\platform\header\header.html" />
+    <Content Include="src\platform\login\login.html" />
     <Content Include="src\platform\menu\menu.html" />
     <Content Include="src\platform\sass\common\common.css">
       <DependentUpon>common.scss</DependentUpon>
@@ -87,6 +89,12 @@
     </Content>
     <Content Include="src\platform\sass\header\header.min.css">
       <DependentUpon>header.css</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\login\login.css">
+      <DependentUpon>login.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\login\login.min.css">
+      <DependentUpon>login.css</DependentUpon>
     </Content>
     <Content Include="src\platform\sass\main.css">
       <DependentUpon>main.scss</DependentUpon>
@@ -140,6 +148,10 @@
       <DependentUpon>header.css</DependentUpon>
     </None>
     <None Include="src\platform\sass\header\header.scss" />
+    <None Include="src\platform\sass\login\login.css.map">
+      <DependentUpon>login.css</DependentUpon>
+    </None>
+    <None Include="src\platform\sass\login\login.scss" />
     <None Include="src\platform\sass\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </None>
@@ -153,10 +165,12 @@
     <TypeScriptCompile Include="src\app.ts" />
     <TypeScriptCompile Include="src\dashboard\dashboardController.ts" />
     <TypeScriptCompile Include="src\dashboard\index.ts" />
+    <TypeScriptCompile Include="src\platform\appShell\appShellController.ts" />
     <TypeScriptCompile Include="src\platform\common\services\authService.ts" />
     <TypeScriptCompile Include="src\platform\content\contentShellController.ts" />
     <TypeScriptCompile Include="src\platform\header\headerController.ts" />
     <TypeScriptCompile Include="src\platform\index.ts" />
+    <TypeScriptCompile Include="src\platform\login\loginController.ts" />
     <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
     <TypeScriptCompile Include="src\uiElements\index.ts" />
     <TypeScriptCompile Include="src\uiElements\uiElementsController.ts" />

@@ -4,6 +4,9 @@ import angular = require('angular');
 import headerController = require("./header/headerController");
 import menuController = require("./menu/menuController");
 import contentShellController = require("./content/contentShellController");
+import appShellController = require("./appShell/AppShellController");
+import loginController = require("./login/loginController");
+
 import authService = require("./common/services/authService");
 
 var platformModule = angular.module('app.platform', []);
@@ -11,6 +14,30 @@ var platformModule = angular.module('app.platform', []);
 platformModule.controller("headerController", headerController);
 platformModule.controller("menuController", menuController);
 platformModule.controller("contentShellController", contentShellController);
+platformModule.controller("appShellController", appShellController);
+platformModule.controller("loginController", loginController);
+
+platformModule.directive('platformAppShell', function () {
+    return {
+        restrict: "EA",
+        replace: true,
+        templateUrl: './platform/appShell/appShell.html',
+        controller: 'appShellController',
+        controllerAs: "appShellInstance",
+        bindToController: true
+    };
+});
+
+platformModule.directive('platformLogin', function () {
+    return {
+        restrict: "EA",
+        replace: true,
+        templateUrl: './platform/login/login.html',
+        controller: 'loginController',
+        controllerAs: "loginInstance",
+        bindToController: true
+    };
+});
 
 platformModule.directive('platformHeader', function () {
     return {
