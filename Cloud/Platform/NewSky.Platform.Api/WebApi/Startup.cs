@@ -31,8 +31,11 @@ namespace NewSky.Platform.Api.WebApi
 			OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
 			{
 				AllowInsecureHttp = true,
+				// The path for generatiog tokens will be as "http://localhost:port/token".
 				TokenEndpointPath = new PathString("/token"),
+				// Specify the expiry for token.
 				AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+				// Specify how to validate the credentials for users asking for tokens.
 				Provider = new SimpleAuthorizationServerProvider()
 			};
 

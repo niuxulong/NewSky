@@ -4,6 +4,7 @@ import angular = require('angular');
 import headerController = require("./header/headerController");
 import menuController = require("./menu/menuController");
 import contentShellController = require("./content/contentShellController");
+import authService = require("./common/services/authService");
 
 var platformModule = angular.module('app.platform', []);
 
@@ -43,6 +44,8 @@ platformModule.directive('platformContent', function () {
         bindToController: true
     };
 });
+
+platformModule.service('authService', authService);
 
 platformModule.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');

@@ -1,9 +1,9 @@
 ﻿class HeaderController {
-    static $inject = ["$scope"];
+    static $inject = ["$scope", 'authService'];
 
     private isMenuClosed: boolean = false;
 
-    constructor(private scope) {
+    constructor(private scope, private authService) {
         scope.menuInstance = this;
     }
 
