@@ -48,6 +48,9 @@
     <Reference Include="Microsoft.Owin">
       <HintPath>..\..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin.Cors">
+      <HintPath>..\..\..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Owin.Hosting">
       <HintPath>..\..\..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
@@ -77,6 +80,9 @@
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
@@ -98,6 +104,7 @@
     <Compile Include="WebApi\Interfaces\IProductControllerConfiguration.cs" />
     <Compile Include="WebApi\Interfaces\IServiceModule.cs" />
     <Compile Include="WebApi\Interfaces\IWebApiStartupController.cs" />
+    <Compile Include="WebApi\Providers\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="WebApi\Startup.cs" />
     <Compile Include="WebApi\WebApiStartupController.cs" />
   </ItemGroup>
