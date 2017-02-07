@@ -8,6 +8,7 @@ import appShellController = require("./appShell/AppShellController");
 import loginController = require("./login/loginController");
 
 import authService = require("./common/services/authService");
+import authInterceptorService = require("./common/services/authInterceptorService");
 
 var platformModule = angular.module('app.platform', []);
 
@@ -73,8 +74,11 @@ platformModule.directive('platformContent', function () {
 });
 
 platformModule.service('authService', authService);
+platformModule.service('authInterceptorService', authInterceptorService);
 
-platformModule.config(function ($stateProvider, $urlRouterProvider) {
+platformModule.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+
     $urlRouterProvider.otherwise('/');
 
     $stateProvider

@@ -1,8 +1,8 @@
 ﻿<div>
-    <div ng-if="!appShellInstance.authData">
-        <platform-login/>
-</div>
-    <div ng-if="appShellInstance.authData">
+    <div ng-if="!appShellInstance.isAuth">
+        <platform-login />
+    </div>
+    <div ng-if="appShellInstance.isAuth">
         <div>
             <platform-header />
         </div>

@@ -1,12 +1,16 @@
 ﻿class AppShellController {
-    static $inject = ["$scope", "localStorageService", "$state"];
+    static $inject = ["$scope", "authService", "$state", "$timeout"];
 
-    private authData: {};
+    private isAuth: boolean = false;
 
-    constructor(private scope, private localStorageService, private stateProvider) {
+    constructor(private scope, private authService, private stateProvider, private timeout) {
         scope.appShellInstance = this;
 
-        this.authData = localStorageService.get("authoricationData");
+        scope.$watch('appShellInstance.authService.authentication.isAuth', () => {
+            timeout(() => {
+                this.isAuth = authService.authentication.isAuth;
+            }, 10);
+        });
     }
 }
 

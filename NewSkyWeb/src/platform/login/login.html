@@ -1,5 +1,19 @@
-﻿<div>
+﻿<div class="login-area">
     <div class="login-icon">
-        <!--<img src="../../../logo.jpg" width="300" height="300">-->
+        <img src="../../logo.jpg" />
+    </div>
+    <div class="login-message">
+        {{loginInstance.message}}
+    </div>
+    <div class="login-input-user">
+        User Name
+        <input ng-model="loginInstance.userName" />
+    </div>
+    <div class="login-input-password">
+        Password
+        <input ng-model="loginInstance.password" />
+    </div>
+    <div class="login-button-login">
+        <button ng-click="loginInstance.login()">Login</button>
     </div>
 </div>

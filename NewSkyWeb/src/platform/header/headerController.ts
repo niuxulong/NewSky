@@ -11,6 +11,10 @@
         this.isMenuClosed = !this.isMenuClosed;
         this.scope.$emit("animateMenuEvent");
     }
+
+    private logout() {
+        this.authService.logout();
+    }
 }
 
 export = HeaderController;

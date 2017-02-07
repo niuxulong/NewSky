@@ -1,5 +1,5 @@
 ﻿class ContentShellController {
-    static $inject = ["$scope"];
+    static $inject = ["$scope", "$state"];
 
     private isMenuOpened: boolean = true;
 

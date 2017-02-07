@@ -3,16 +3,14 @@
         <ul>
             <li>
                 <a class="waves-effect waves-dark" ui-sref="dashboard"
-                   ng-class="{'menu-active-menu': menuInstance.selectedMenu === 'Dashboard'}"
-                   ng-click="menuInstance.dashboardClick()">
+                   ng-class="{'menu-active-menu': menuInstance.stateProvider.current.name === 'dashboard'}">
                     <i class="fa fa-dashboard"></i>
                     Dashboard
                 </a>
             </li>
             <li>
                 <a class="waves-effect waves-dark" ui-sref="uiElements"
-                   ng-class="{'menu-active-menu': menuInstance.selectedMenu === 'UIElements'}"
-                   ng-click="menuInstance.uiElementsClick()">
+                   ng-class="{'menu-active-menu': menuInstance.stateProvider.current.name === 'uiElements'}">
                     <i class="fa fa-desktop"></i>
                     UI Elements
                 </a>

@@ -53,3 +53,11 @@
 /Cloud/Platform/NewSky.Platform.WebApi/obj/Debug
 /Cloud/Platform/NewSky.Platform.Service/obj/Debug
 /packages
+/NewSkyWeb/src/platform/appShell/appShellController.js
+/NewSkyWeb/src/platform/appShell/appShellController.js.map
+/NewSkyWeb/src/platform/common/services/authInterceptorService.js
+/NewSkyWeb/src/platform/common/services/authInterceptorService.js.map
+/NewSkyWeb/src/platform/common/services/authService.js
+/NewSkyWeb/src/platform/common/services/authService.js.map
+/NewSkyWeb/src/platform/login/loginController.js
+/NewSkyWeb/src/platform/login/loginController.js.map
