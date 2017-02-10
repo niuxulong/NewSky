@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewSky.Platform.Api", "Clou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewSky.Platform.Service", "Cloud\Platform\NewSky.Platform.Service\NewSky.Platform.Service.csproj", "{ADAE4DDB-8392-4813-80F3-282488FFF7B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{19A004DA-09A7-43DD-AE8F-61524807351D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NewSky.Platform.Database", "Cloud\Platform\NewSky.Platform.Database\NewSky.Platform.Database.sqlproj", "{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,12 @@ Global
 		{ADAE4DDB-8392-4813-80F3-282488FFF7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADAE4DDB-8392-4813-80F3-282488FFF7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADAE4DDB-8392-4813-80F3-282488FFF7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +68,7 @@ Global
 		{A1FD0B07-6E58-4FD3-A627-34ADB4E1606D} = {5BFDE6F3-5D41-425C-944A-0E313FCEA3E2}
 		{A7AB6171-40DF-455A-AB71-D8392CADA4AC} = {5BFDE6F3-5D41-425C-944A-0E313FCEA3E2}
 		{ADAE4DDB-8392-4813-80F3-282488FFF7B1} = {5BFDE6F3-5D41-425C-944A-0E313FCEA3E2}
+		{19A004DA-09A7-43DD-AE8F-61524807351D} = {5BFDE6F3-5D41-425C-944A-0E313FCEA3E2}
+		{D9C9BBBE-C23B-4F85-BDD4-691B825412BC} = {19A004DA-09A7-43DD-AE8F-61524807351D}
 	EndGlobalSection
 EndGlobal

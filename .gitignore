@@ -61,3 +61,7 @@
 /NewSkyWeb/src/platform/common/services/authService.js.map
 /NewSkyWeb/src/platform/login/loginController.js
 /NewSkyWeb/src/platform/login/loginController.js.map
+/Cloud/Platform/NewSky.Platform.Database/bin/Debug
+/Cloud/Platform/NewSky.Platform.Database/obj/Debug
+/NewSkyWeb/src/platform/common/constants/namingRegistry.js
+/NewSkyWeb/src/platform/common/constants/namingRegistry.js.map

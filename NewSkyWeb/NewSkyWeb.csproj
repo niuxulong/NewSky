@@ -166,6 +166,7 @@
     <TypeScriptCompile Include="src\dashboard\dashboardController.ts" />
     <TypeScriptCompile Include="src\dashboard\index.ts" />
     <TypeScriptCompile Include="src\platform\appShell\appShellController.ts" />
+    <TypeScriptCompile Include="src\platform\common\constants\namingRegistry.ts" />
     <TypeScriptCompile Include="src\platform\common\services\authInterceptorService.ts" />
     <TypeScriptCompile Include="src\platform\common\services\authService.ts" />
     <TypeScriptCompile Include="src\platform\content\contentShellController.ts" />

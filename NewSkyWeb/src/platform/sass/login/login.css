@@ -48,6 +48,11 @@
   margin-top: 5px;
 }
 
+.login-checkbox-use-refresh-token {
+  margin-left: 140px;
+  margin-bottom: -20px;
+}
+
 .login-button-login {
   margin-left: 70px;
   margin-top: 30px;

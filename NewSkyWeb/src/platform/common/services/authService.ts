@@ -1,6 +1,7 @@
 ﻿/// <reference path="../../../../typings/angular/angular.d.ts" />
 
 import angular = require("angular");
+import namingRegistry = require("../constants/namingRegistry");
 
 class AuthService {
     static $inject = ["$http", "localStorageService"];
@@ -9,7 +10,8 @@ class AuthService {
 
     private authentication = {
         isAuth: false,
-        userName: ""
+        userName: "",
+        useRefreshTokens: false
     }
 
     constructor(private $http, private localStorageService) {
@@ -21,7 +23,7 @@ class AuthService {
 
         return this.$http({
             method: "POST",
-            url: this.serviceBase + 'api/platform/register',
+            url: this.serviceBase + 'register',
             data: registration
         }).then(function (response) {
                 return response.data;
@@ -29,19 +31,38 @@ class AuthService {
     }
 
     private logIn = (loginData): angular.IPromise<{}> => {
+        var postData = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
+        if (loginData.useRefreshToken) {
+            postData = postData + "&client_id=" + namingRegistry.platformClientId;
+        }
+
         return this.$http({
             method: "POST",
             url: this.serviceBase + 'token',
-            data: "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password,
+            data: postData,
             headers: { "Content-Type": 'application/x-www-form-urlencoded'}
         }).then((response) => {
-                this.localStorageService.set('authorizationData',
-                    {
-                        token: response.data.access_token,
-                        userName: loginData.userName
-                    });
+                if (loginData.useRefreshToken) {
+                    this.localStorageService.set('authorizationData',
+                        {
+                            token: response.data.access_token,
+                            userName: loginData.userName,
+                            refreshToken: response.data.refresh_token,
+                            useRefreshTokens: true
+                        });
+                } else {
+                    this.localStorageService.set('authorizationData',
+                        {
+                            token: response.data.access_token,
+                            userName: loginData.userName,
+                            refreshToken: "",
+                            useRefreshTokens: false
+                        });
+                }
+                
                 this.authentication.isAuth = true;
                 this.authentication.userName = loginData.userName;
+                this.authentication.useRefreshTokens = loginData.useRefreshToken;
                 return response;
             },
             (response) => {
@@ -51,10 +72,42 @@ class AuthService {
         );
     }
 
+    private refreshToken = () => {
+        var authData = this.localStorageService.get('authorizationData');
+        if (authData && authData.useRefreshTokens)
+        {
+            var postData = "grant_type=refresh_token&refresh_token=" + authData.refreshToken + "&client_id=" + namingRegistry.platformClientId;
+            this.localStorageService.remove('authorizationData');
+
+            return this.$http({
+                method: "POST",
+                url: this.serviceBase + 'token',
+                data: postData,
+                headers: { "Content-Type": 'application/x-www-form-urlencoded' }
+            }).then((response) => {
+                    this.localStorageService.set('authorizationData',
+                        {
+                            token: response.data.access_token,
+                            userName: response.userName,
+                            refreshToken: response.data.refresh_token,
+                            useRefreshTokens: true
+                        });
+
+                return response;
+            },
+                (response) => {
+                    this.logout();
+                    return { "error": response };
+                }
+            );
+        }
+    }
+
     private logout(): void {
         this.localStorageService.remove('authorizationData');
         this.authentication.isAuth = false;
         this.authentication.userName = "";
+        this.authentication.useRefreshTokens = false;
     }
 
     private fillAuthData = () => {
@@ -62,6 +115,7 @@ class AuthService {
         if (authData) {
             this.authentication.isAuth = true;
             this.authentication.userName = authData.userName;
+            this.authentication.useRefreshTokens = authData.useRefreshTokens;
         }
     }
 }

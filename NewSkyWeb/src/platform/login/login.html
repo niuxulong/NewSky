@@ -7,11 +7,15 @@
     </div>
     <div class="login-input-user">
         User Name
-        <input ng-model="loginInstance.userName" />
+        <input ng-model="loginInstance.loginData.userName" placeholder="your name"/>
     </div>
     <div class="login-input-password">
         Password
-        <input ng-model="loginInstance.password" />
+        <input ng-model="loginInstance.loginData.password" placeholder="your password"/>
+    </div>
+    <div class="login-checkbox-use-refresh-token">
+        <input type="checkbox" id="is-use-refresh-token" ng-model="loginInstance.loginData.useRefreshToken" />
+        <label for="is-use-refresh-token">Use Refresh Tokens</label>
     </div>
     <div class="login-button-login">
         <button ng-click="loginInstance.login()">Login</button>

@@ -2,6 +2,7 @@
 using System.ComponentModel.Composition;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Microsoft.AspNet.Identity;
 using NewSky.Platform.Api.Interfaces;
 using NewSky.Platform.Api.Models;
 using NewSky.Platform.Service.Interfaces;
@@ -13,6 +14,9 @@ namespace NewSky.Platform.WebApi.Controllers
 		[Import]
 		private IUserHandler userHandler { get; set; }
 
+		[Import]
+		private IAuthRepository authRepository { get; set; }
+
 		[AllowAnonymous]
 		[Route("User/Register")]
 		[AcceptVerbs("GET", "POST")]
@@ -23,15 +27,15 @@ namespace NewSky.Platform.WebApi.Controllers
 				return BadRequest(ModelState);
 			}
 
-			var result = await this.userHandler.Create(newUser);
+			IdentityResult result = await authRepository.RegisterUser(newUser).ConfigureAwait(false);
 
-			return Ok();
-		}
+			IHttpActionResult errorResult = GetErrorResult(result);
 
-		[Route("User/Login")]
-		[AcceptVerbs("GET", "POST")]
-		public async Task<IHttpActionResult> Login(string uname, string pwd)
-		{
+			if (errorResult != null)
+			{
+				return errorResult;
+			}
+
 			return Ok();
 		}
 
@@ -41,5 +45,32 @@ namespace NewSky.Platform.WebApi.Controllers
 		{
 			return new string[] { "128: Green Than", "223: Summer Whzd" };
 		}
+
+		private IHttpActionResult GetErrorResult(IdentityResult result)
+		{
+			if (result == null)
+			{
+				return InternalServerError();
+			}
+
+			if (!result.Succeeded)
+			{
+				if (result.Errors != null)
+				{
+					foreach (var error in result.Errors)
+					{
+						ModelState.AddModelError("", error);
+					}
+				}
+
+				if (ModelState.IsValid)
+				{
+					return BadRequest();
+				}
+			}
+
+			return null;
+		}
+
 	}
 }

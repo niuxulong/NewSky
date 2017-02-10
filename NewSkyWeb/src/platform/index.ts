@@ -10,6 +10,8 @@ import loginController = require("./login/loginController");
 import authService = require("./common/services/authService");
 import authInterceptorService = require("./common/services/authInterceptorService");
 
+import namingRegistry = require("./common/constants/namingRegistry");
+
 var platformModule = angular.module('app.platform', []);
 
 platformModule.controller("headerController", headerController);
