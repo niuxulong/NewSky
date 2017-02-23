@@ -8,7 +8,6 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using NewSky.Platform.Api.Entities;
 using NewSky.Platform.Api.Interfaces;
 using NewSky.Platform.Api.Models;
-using NewSky.Platform.Api.Utils;
 
 namespace NewSky.Platform.Api
 {

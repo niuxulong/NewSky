@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Web.Http;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
@@ -15,7 +14,6 @@ namespace NewSky.Platform.Api.WebApi
 			ConfigureOAuth(app);
 
 			HttpConfiguration config = new HttpConfiguration();
-
 			config.MapHttpAttributeRoutes();
 			config.Routes.MapHttpRoute(
 					name: "DefaultApi",
@@ -25,7 +23,6 @@ namespace NewSky.Platform.Api.WebApi
 
 			app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 			app.UseWebApi(config);
-
 		}
 
 		public void ConfigureOAuth(IAppBuilder app)
@@ -33,11 +30,8 @@ namespace NewSky.Platform.Api.WebApi
 			OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
 			{
 				AllowInsecureHttp = true,
-				// The path for generatiog tokens will be as "http://localhost:port/token".
 				TokenEndpointPath = new PathString("/token"),
-				// Specify the expiry for token.
 				AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
-				// Specify how to validate the credentials for users asking for tokens.
 				Provider = new SimpleAuthorizationServerProvider(),
 				RefreshTokenProvider = new SimpleRefreshTokenProvider()
 			};
