@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using NewSky.Platform.Api.DbContexts;
 using NewSky.Platform.Api.Entities;
 using NewSky.Platform.Api.Interfaces;
 using NewSky.Platform.Api.Models;
@@ -37,15 +38,12 @@ namespace NewSky.Platform.Api
 
 		public async Task<IdentityUser> FindUser(string userName, string password)
 		{
-			IdentityUser user = await userManager.FindAsync(userName, password);
-
-			return user;
+			return await userManager.FindAsync(userName, password);
 		}
 
 		public Client FindClient(string clientId)
 		{
-			var client = ctx.Clients.Find(clientId);
-			return client;
+			return ctx.Clients.Find(clientId);
 		}
 
 		public async Task<bool> AddRefreshToken(RefreshToken token)

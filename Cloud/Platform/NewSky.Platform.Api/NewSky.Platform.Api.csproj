@@ -103,7 +103,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthContext.cs" />
+    <Compile Include="DbContexts\AuthContext.cs" />
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\RefreshToken.cs" />

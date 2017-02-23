@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using NewSky.Platform.Api.Entities;
-using NewSky.Platform.Api.Utils;
+﻿using System.Data.Entity.Migrations;
+using NewSky.Platform.Api.DbContexts;
 
 namespace NewSky.Platform.Api.Migrations
 {

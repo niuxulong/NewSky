@@ -2,13 +2,14 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using NewSky.Platform.Api.Entities;
 
-namespace NewSky.Platform.Api
+namespace NewSky.Platform.Api.DbContexts
 {
 	public class AuthContext : IdentityDbContext<IdentityUser>
 	{
 		public AuthContext()
-			: base(@"server=.\sql12;database=NewSky;uid=sa;password=ezetc")
+			: base("NewSkyDatabase")
 		{
+			Database.SetInitializer<AuthContext>(new CreateDatabaseIfNotExists<AuthContext>());
 		}
 
 		public DbSet<Client> Clients { get; set; }
