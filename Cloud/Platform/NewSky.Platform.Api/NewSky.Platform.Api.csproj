@@ -110,9 +110,6 @@
     <Compile Include="Interfaces\AbstractApiController.cs" />
     <Compile Include="Interfaces\IAuthRepository.cs" />
     <Compile Include="IoC.cs" />
-    <Compile Include="Migrations\Configuration.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

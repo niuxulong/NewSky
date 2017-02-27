@@ -1,21 +1,18 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.Composition;
+﻿using System.ComponentModel.Composition;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using NewSky.Platform.Api.Interfaces;
 using NewSky.Platform.Api.Models;
-using NewSky.Platform.Service.Interfaces;
+using NewSky.Platform.Service.Handlers;
 
 namespace NewSky.Platform.WebApi.Controllers
 {
 	public class UserController : AbstractApiController
 	{
 		[Import]
-		private IUserHandler userHandler { get; set; }
-
-		[Import]
-		private IAuthRepository authRepository { get; set; }
+		private UserHandler userHandler { get; set; }
 
 		[AllowAnonymous]
 		[Route("User/Register")]
@@ -27,7 +24,7 @@ namespace NewSky.Platform.WebApi.Controllers
 				return BadRequest(ModelState);
 			}
 
-			IdentityResult result = await authRepository.RegisterUser(newUser).ConfigureAwait(false);
+			var result = await userHandler.Create(newUser).ConfigureAwait(false);
 
 			IHttpActionResult errorResult = GetErrorResult(result);
 
@@ -39,12 +36,12 @@ namespace NewSky.Platform.WebApi.Controllers
 			return Ok();
 		}
 
-		[Authorize]
-		[Route("User/Get")]
-		public async Task<IEnumerable<string>> GetUserInfo()
-		{
-			return new string[] { "128: Green Than", "223: Summer Whzd" };
-		}
+		//[Authorize]
+		//[Route("User/Get")]
+		//public async Task<IEnumerable<string>> GetUserInfo()
+		//{
+		//	var result = await userHandler.
+		//}
 
 		private IHttpActionResult GetErrorResult(IdentityResult result)
 		{

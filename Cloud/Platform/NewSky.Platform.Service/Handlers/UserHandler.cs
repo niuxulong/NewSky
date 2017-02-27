@@ -1,25 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
+using NewSky.Platform.Api.Interfaces;
 using NewSky.Platform.Api.Models;
 using NewSky.Platform.Service.Interfaces;
 
 namespace NewSky.Platform.Service.Handlers
 {
-	[Export(typeof(IUserHandler)), PartCreationPolicy(CreationPolicy.Shared)]
-	public class UserHandler : IUserHandler
+	[Export(typeof(UserHandler)), PartCreationPolicy(CreationPolicy.Shared)]
+	public class UserHandler
 	{
 		private List<User> users = new List<User>();
+		private readonly IUserManager userManager;
 
 		[ImportingConstructor]
-		public UserHandler()
+		public UserHandler(IUserManager userManager)
 		{
+			this.userManager = userManager;
 		}
 
-		public async Task<bool> Create(User newUser)
+		public async Task<IdentityResult> Create(User newUser)
 		{
-			users.Add(newUser);
-			return true;
+			return await userManager.CreateUser(newUser).ConfigureAwait(false);
 		}
 	}
 }

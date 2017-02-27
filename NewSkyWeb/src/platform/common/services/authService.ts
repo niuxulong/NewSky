@@ -65,9 +65,9 @@ class AuthService {
                 this.authentication.useRefreshTokens = loginData.useRefreshToken;
                 return response;
             },
-            (response) => {
+            (error) => {
                 this.logout();
-                return { "error": response };
+                return { "error": error };
             }
         );
     }
@@ -95,10 +95,10 @@ class AuthService {
 
                 return response;
             },
-                (response) => {
-                    this.logout();
-                    return { "error": response };
-                }
+            (error) => {
+                this.logout();
+                return { "error": error };
+            }
             );
         }
     }
