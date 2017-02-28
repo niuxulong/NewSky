@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.Composition;
+﻿using System;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -19,29 +20,29 @@ namespace NewSky.Platform.WebApi.Controllers
 		[AcceptVerbs("GET", "POST")]
 		public async Task<IHttpActionResult> Register(User newUser)
 		{
-			if (!ModelState.IsValid)
+			try
 			{
-				return BadRequest(ModelState);
+				if (!ModelState.IsValid)
+				{
+					return BadRequest(ModelState.Values.FirstOrDefault().Errors.FirstOrDefault().ErrorMessage);
+				}
+
+				var result = await userHandler.Create(newUser).ConfigureAwait(false);
+
+				IHttpActionResult errorResult = GetErrorResult(result);
+
+				if (errorResult != null)
+				{
+					return errorResult;
+				}
+
+				return Ok();
 			}
-
-			var result = await userHandler.Create(newUser).ConfigureAwait(false);
-
-			IHttpActionResult errorResult = GetErrorResult(result);
-
-			if (errorResult != null)
+			catch (Exception ex)
 			{
-				return errorResult;
+				return InternalServerError(ex);
 			}
-
-			return Ok();
 		}
-
-		//[Authorize]
-		//[Route("User/Get")]
-		//public async Task<IEnumerable<string>> GetUserInfo()
-		//{
-		//	var result = await userHandler.
-		//}
 
 		private IHttpActionResult GetErrorResult(IdentityResult result)
 		{

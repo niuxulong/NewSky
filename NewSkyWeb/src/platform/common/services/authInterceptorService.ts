@@ -34,6 +34,8 @@ class AuthInterceptorService {
             } else {
                 authService.logout();
             }
+        } else {
+            return rejection;
         }
     }
 }

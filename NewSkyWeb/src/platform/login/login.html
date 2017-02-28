@@ -13,11 +13,18 @@
         Password
         <input ng-model="loginInstance.loginData.password" placeholder="your password"/>
     </div>
-    <div class="login-checkbox-use-refresh-token">
+    <div class="login-input-password" ng-show="!loginInstance.isLoginMode">
+        Confirm Password
+        <input ng-model="loginInstance.loginData.confirmPassword" placeholder="input password again" />
+    </div>
+    <div class="login-checkbox-use-refresh-token" ng-show="loginInstance.isLoginMode">
         <input type="checkbox" id="is-use-refresh-token" ng-model="loginInstance.loginData.useRefreshToken" />
         <label for="is-use-refresh-token">Use Refresh Tokens</label>
     </div>
     <div class="login-button-login">
-        <button ng-click="loginInstance.login()">Login</button>
+        <button ng-click="loginInstance.loginOrSignUp()">{{loginInstance.buttonText}}</button>
+    </div>
+    <div class="login-signup-link">
+        <a href="#" ng-click="loginInstance.signupLickClick()">{{loginInstance.linkText}}</a>
     </div>
 </div>

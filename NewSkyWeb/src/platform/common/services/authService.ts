@@ -23,10 +23,16 @@ class AuthService {
 
         return this.$http({
             method: "POST",
-            url: this.serviceBase + 'register',
+            url: this.serviceBase + 'User/Register',
             data: registration
-        }).then(function (response) {
-                return response.data;
+        }).then((response) => {
+                if (response.status === 200) {
+                    return response.data;
+                } else {
+                    return { "error": response.data.Message };
+                }
+            }, (error) => {
+                return { "error": error};
         });
     }
 
@@ -42,27 +48,33 @@ class AuthService {
             data: postData,
             headers: { "Content-Type": 'application/x-www-form-urlencoded'}
         }).then((response) => {
-                if (loginData.useRefreshToken) {
-                    this.localStorageService.set('authorizationData',
-                        {
-                            token: response.data.access_token,
-                            userName: loginData.userName,
-                            refreshToken: response.data.refresh_token,
-                            useRefreshTokens: true
-                        });
+                if (response.status === 200) {
+                    if (loginData.useRefreshToken) {
+                        this.localStorageService.set('authorizationData',
+                            {
+                                token: response.data.access_token,
+                                userName: loginData.userName,
+                                refreshToken: response.data.refresh_token,
+                                useRefreshTokens: true
+                            });
+                    } else {
+                        this.localStorageService.set('authorizationData',
+                            {
+                                token: response.data.access_token,
+                                userName: loginData.userName,
+                                refreshToken: "",
+                                useRefreshTokens: false
+                            });
+                    }
+
+                    this.authentication.isAuth = true;
+                    this.authentication.userName = loginData.userName;
+                    this.authentication.useRefreshTokens = loginData.useRefreshToken;
                 } else {
-                    this.localStorageService.set('authorizationData',
-                        {
-                            token: response.data.access_token,
-                            userName: loginData.userName,
-                            refreshToken: "",
-                            useRefreshTokens: false
-                        });
+                    this.logout();
+                    return { "error": response.data.error_description };
                 }
                 
-                this.authentication.isAuth = true;
-                this.authentication.userName = loginData.userName;
-                this.authentication.useRefreshTokens = loginData.useRefreshToken;
                 return response;
             },
             (error) => {

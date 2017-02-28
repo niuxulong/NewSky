@@ -266,4 +266,13 @@
   background-color: aquamarine;
 }
 
+.login-signup-link {
+  margin-left: 220px;
+  margin-top: 10px;
+}
+
+.login-signup-link > a:visited {
+  color: Highlight;
+}
+
 /*# sourceMappingURL=main.css.map */

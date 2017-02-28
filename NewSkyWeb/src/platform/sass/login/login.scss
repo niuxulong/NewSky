@@ -70,3 +70,12 @@
          background-color: aquamarine;
      }
 }
+
+.login-signup-link{
+    margin-left: 220px;
+    margin-top: 10px;
+    
+    > a:visited{
+        color: Highlight;
+    }
+}
