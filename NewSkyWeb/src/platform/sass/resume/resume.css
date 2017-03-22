@@ -1,0 +1,30 @@
+﻿.resume-main-body {
+  width: auto;
+  height: 2600px;
+}
+
+.resume-personal-info {
+  width: 350px;
+  height: 100%;
+  background: #2c445b;
+  margin-top: 20px;
+  margin-left: 110px;
+  float: left;
+}
+
+.resume-personal-info > img {
+  width: 200px;
+  height: 260px;
+  margin-left: 77px;
+  margin-top: 50px;
+}
+
+.resume-items-info {
+  width: 1400px;
+  height: 100%;
+  background-color: aliceblue;
+  margin-top: 20px;
+  float: left;
+}
+
+/*# sourceMappingURL=resume.css.map */

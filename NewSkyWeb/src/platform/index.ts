@@ -6,6 +6,7 @@ import menuController = require("./menu/menuController");
 import contentShellController = require("./content/contentShellController");
 import appShellController = require("./appShell/AppShellController");
 import loginController = require("./login/loginController");
+import resumeController = require("./resume/resumeController");
 
 import authService = require("./common/services/authService");
 import authInterceptorService = require("./common/services/authInterceptorService");
@@ -19,6 +20,7 @@ platformModule.controller("menuController", menuController);
 platformModule.controller("contentShellController", contentShellController);
 platformModule.controller("appShellController", appShellController);
 platformModule.controller("loginController", loginController);
+platformModule.controller("resumeController", resumeController);
 
 platformModule.directive('platformAppShell', function () {
     return {
@@ -38,6 +40,17 @@ platformModule.directive('platformLogin', function () {
         templateUrl: './platform/login/login.html',
         controller: 'loginController',
         controllerAs: "loginInstance",
+        bindToController: true
+    };
+});
+
+platformModule.directive('resume', function () {
+    return {
+        restrict: "EA",
+        replace: true,
+        templateUrl: './platform/resume/resume.html',
+        controller: 'resumeController',
+        controllerAs: "resumeInstance",
         bindToController: true
     };
 });
@@ -93,11 +106,11 @@ platformModule.config(function ($stateProvider, $urlRouterProvider, $httpProvide
         }
     })
 
-    .state('uiElements', {
-        url: '/uiElements',
+    .state('tecArticles', {
+        url: '/tecArticles',
         views: {
             'content@': {
-                template: '<ui-elements/>'
+                template: '<tec-Articles/>'
             }
         }
     })

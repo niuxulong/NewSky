@@ -33,6 +33,7 @@
   background-color: lightgoldenrodyellow;
   height: 20px;
   margin-top: 5px;
+  color: black;
 }
 
 .login-input-password {
@@ -46,6 +47,7 @@
   background-color: lightgoldenrodyellow;
   height: 20px;
   margin-top: 5px;
+  color: black;
 }
 
 .login-checkbox-use-refresh-token {

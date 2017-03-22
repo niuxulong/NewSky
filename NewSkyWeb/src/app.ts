@@ -3,7 +3,7 @@
 import angular = require('angular');
 import platformModule = require("./platform/index");
 import dashboardModule = require("./dashboard/index");
-import uiElementsModule = require("./uiElements/index");
+import tecArticlesModule = require("./tecArticles/index");
 
 var appModule = angular.module('app', [
     'ui.materialize',
@@ -11,6 +11,6 @@ var appModule = angular.module('app', [
     'LocalStorageModule',
     platformModule.name,
     dashboardModule.name,
-    uiElementsModule.name]);
+    tecArticlesModule.name]);
 
 export = appModule;

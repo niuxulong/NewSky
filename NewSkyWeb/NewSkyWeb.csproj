@@ -78,6 +78,7 @@
     <Content Include="src\platform\header\header.html" />
     <Content Include="src\platform\login\login.html" />
     <Content Include="src\platform\menu\menu.html" />
+    <Content Include="src\platform\resume\resume.html" />
     <Content Include="src\platform\sass\common\common.css">
       <DependentUpon>common.scss</DependentUpon>
     </Content>
@@ -108,7 +109,13 @@
     <Content Include="src\platform\sass\menu\menu.min.css">
       <DependentUpon>menu.css</DependentUpon>
     </Content>
-    <Content Include="src\uiElements\uiElements.html" />
+    <Content Include="src\platform\sass\resume\resume.css">
+      <DependentUpon>resume.scss</DependentUpon>
+    </Content>
+    <Content Include="src\platform\sass\resume\resume.min.css">
+      <DependentUpon>resume.css</DependentUpon>
+    </Content>
+    <Content Include="src\tecArticles\tecArticles.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="src\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
@@ -160,6 +167,10 @@
       <DependentUpon>menu.css</DependentUpon>
     </None>
     <None Include="src\platform\sass\menu\menu.scss" />
+    <None Include="src\platform\sass\resume\resume.css.map">
+      <DependentUpon>resume.css</DependentUpon>
+    </None>
+    <None Include="src\platform\sass\resume\resume.scss" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app.ts" />
@@ -174,8 +185,9 @@
     <TypeScriptCompile Include="src\platform\index.ts" />
     <TypeScriptCompile Include="src\platform\login\loginController.ts" />
     <TypeScriptCompile Include="src\platform\menu\menuController.ts" />
-    <TypeScriptCompile Include="src\uiElements\index.ts" />
-    <TypeScriptCompile Include="src\uiElements\uiElementsController.ts" />
+    <TypeScriptCompile Include="src\platform\resume\resumeController.ts" />
+    <TypeScriptCompile Include="src\tecArticles\index.ts" />
+    <TypeScriptCompile Include="src\tecArticles\tecArticlesController.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
