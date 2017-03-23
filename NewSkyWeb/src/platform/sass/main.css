@@ -278,7 +278,7 @@
 
 .resume-main-body {
   width: auto;
-  height: 2600px;
+  height: 600px;
 }
 
 .resume-personal-info {
@@ -305,4 +305,43 @@
   float: left;
 }
 
+.resume-personal-info-icon {
+    font-size: large;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.resume-personal-info-text {
+    margin-left: 10px;
+}
+
+.resume-personal-info-item{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.resume-items-info-name {
+   margin-left: 40px;
+   margin-top: 45px;
+}
+
+.resume-items-info-name > h1 {
+    font-weight: 900;
+    color: #2c445b;
+    font-size: 4em;
+}
+
+.resume-items-info-target {
+    margin-left: 40px;
+    margin-top: 45px;
+}
+
+.resume-items-info-icon {
+    font-size: 2em;
+    /*color: aliceblue;*/
+}
+
+.resume-items-info-title {
+    font-size: 2em;
+}
 /*# sourceMappingURL=main.css.map */
