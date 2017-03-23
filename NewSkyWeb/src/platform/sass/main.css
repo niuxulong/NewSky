@@ -278,7 +278,7 @@
 
 .resume-main-body {
   width: auto;
-  height: 600px;
+  height: 2560px;
 }
 
 .resume-personal-info {
@@ -286,7 +286,7 @@
   height: 100%;
   background: #2c445b;
   margin-top: 20px;
-  margin-left: 110px;
+  margin-left: 180px;
   float: left;
 }
 
@@ -298,7 +298,7 @@
 }
 
 .resume-items-info {
-  width: 1400px;
+  width: 1200px;
   height: 100%;
   background-color: aliceblue;
   margin-top: 20px;
@@ -320,6 +320,13 @@
     margin-top: 30px;
 }
 
+.resume-itmes-info-tec-line {
+    height:10px;
+    width: 200px;
+    background-color: lightgray;
+    margin-top: 10px;
+}
+
 .resume-items-info-name {
    margin-left: 40px;
    margin-top: 45px;
@@ -333,15 +340,34 @@
 
 .resume-items-info-target {
     margin-left: 40px;
-    margin-top: 45px;
+    margin-top: 40px;
 }
 
 .resume-items-info-icon {
-    font-size: 2em;
-    /*color: aliceblue;*/
+    font-size: 3em;
+    color: #2c445b;
+    display: inline;
 }
 
 .resume-items-info-title {
+    margin-left: 55px;
+    color: #2c445b;
     font-size: 2em;
+    margin-top: -45px;
+}
+
+.resume-itmes-info-line {
+    height:2px;
+    width: 1000px;
+    background: #2c445b;
+    margin-left: 55px;
+    margin-top: 0px;
+}
+
+.resume-items-info-content {
+    font-size: medium;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-family:Arial
 }
 /*# sourceMappingURL=main.css.map */
